@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './control.css';
 
-function BuildControl() {
+export default function BuildControl() {
     const [ingredients, setIngredients] = useState({
         salad: 0,
         tomato: 0,
