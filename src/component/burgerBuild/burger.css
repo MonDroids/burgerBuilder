@@ -1,144 +1,224 @@
-.burger{
-    width: 100%;
-    margin: auto;
-    height: 250px;
-    overflow: scroll;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2rem;
+/* Container Styles */
+.burger-container {
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-@media (max-width: 1000px) and (min-height: 700px){
-    .burger {
-        height: 600px;
-        width: 700px;
-    }
+/* .burger-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: #e27b36;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
-@media (max-width: 500px) and (min-height: 401px){
-    .burger {
-        width: 450px;
-        height: 400px;
-    }
+.burger-subtitle {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #555;
+  margin-bottom: 20px;
+} */
+
+/* Burger Styles */
+.burger {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  height: 60vh;
+  min-height: 300px;
+  max-height: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-@media (max-width: 500px) and (min-height: 400px){
-    .burger {
-        width: 350px;
-        height: 300px;
-    }
-}
-
-.button-bun {
-    height: 13%;
-    width: 80%;
-    background: linear-gradient(#f08e4a, #e27b36);
-    border-radius: 0 0 30px 30px;
-    box-shadow: inset 0 -15px 0 #c15711;
-    margin: 2% auto;
-}
-
+/* Bun Styles */
 .top-bun {
-    height: 20%;
-    width: 80%;
-    background: linear-gradient(#bc581e, #e27b36);
-    border-radius: 50% 50% 0 0;
-    box-shadow: inset 0 -15px 0 #c15711;
-    margin: 2% auto;
-    position: relative;
+  height: 20%;
+  min-height: 60px;
+  width: 80%;
+  background: linear-gradient(#bc581e, #e27b36);
+  border-radius: 50% 50% 0 0;
+  box-shadow: inset 0 -15px 0 #c15711;
+  margin: 0 auto 2%;
+  position: relative;
+  order: 1;
+  z-index: 10;
 }
 
-.seed1{
-    width: 10%;
-    height: 15%;
-    position: absolute;
-    left: 30%;
-    top: 50%;
-    border-radius: 40%;
-    transform: rotate(-20deg);
+.bottom-bun {
+  height: 13%;
+  min-height: 40px;
+  width: 80%;
+  background: linear-gradient(#f08e4a, #e27b36);
+  border-radius: 0 0 30px 30px;
+  box-shadow: inset 0 -15px 0 #c15711;
+  margin: 2% auto 0;
+  order: 6;
 }
 
-.seed1:after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    border-radius: 40%;
-    position: absolute;
-    top: -260%;
-    left: -170%;
-    border-radius: 40%;
-    transform: rotate(60deg);
-    box-shadow: inset -1px 2px #c9c9c9;
+/* Seed Styles */
+.seed1 {
+  width: 10%;
+  height: 15%;
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  border-radius: 40%;
+  transform: rotate(-20deg);
+  background-color: white;
+  box-shadow: inset -2px 0 #c9c9c9;
 }
 
-.seed1:before{
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    border-radius: 40%;
-    position: absolute;
-    top: 180%;
-    left: -50%;
-    border-radius: 40%;
-    transform: rotate(60deg);
-    box-shadow: inset -1px 3px #c9c9c9;
+.seed1:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: -260%;
+  left: -170%;
+  border-radius: 40%;
+  transform: rotate(60deg);
+  box-shadow: inset -1px 2px #c9c9c9;
 }
 
-.seed2{
-    width: 10%;
-    height: 15%;
-    position: absolute;
-    background-color: white;
-    left: 64%;
-    top: 50%;
-    border-radius: 40%;
-    transform: rotate(10deg);
-    box-shadow: inset 3px 0 #c9c9c9;
+.seed1:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 180%;
+  left: -50%;
+  border-radius: 40%;
+  transform: rotate(60deg);
+  box-shadow: inset -1px 3px #c9c9c9;
 }
 
-.seed2:before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: white;
-    top: -130%;
-    left: -150%;
-    border-radius: 40%;
-    transform: rotate(90deg);
-    box-shadow: inset 1px 3px #c9c9c9;
+.seed2 {
+  width: 10%;
+  height: 15%;
+  position: absolute;
+  background-color: white;
+  left: 64%;
+  top: 50%;
+  border-radius: 40%;
+  transform: rotate(10deg);
+  box-shadow: inset 3px 0 #c9c9c9;
 }
 
+.seed3 {
+  width: 10%;
+  height: 15%;
+  position: absolute;
+  background-color: white;
+  left: 64%;
+  top: 50%;
+  border-radius: 40%;
+  transform: rotate(20deg);
+}
+
+.seed2:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  top: -130%;
+  left: -150%;
+  border-radius: 40%;
+  transform: rotate(90deg);
+  box-shadow: inset 1px 3px #c9c9c9;
+}
+
+/* Ingredient Styles */
 .meat {
-    width: 80%;
-    height: 8%;
-    background: linear-gradient(#7f3608, #702e05);
-    border-radius: 15px;
-    margin: 2% auto;
+  width: 80%;
+  height: 8%;
+  min-height: 20px;
+  background: linear-gradient(#7f3608, #702e05);
+  border-radius: 15px;
+  margin: 1% auto;
+  order: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
 
 .cheese {
-    width: 90%;
-    height: 5%;
-    background: linear-gradient(#f4d004, #d6bb22);
-    border-radius: 20px;
-    margin: 2% auto;
+  width: 90%;
+  height: 5%;
+  min-height: 15px;
+  background: linear-gradient(#f4d004, #d6bb22);
+  border-radius: 20px;
+  margin: 1% auto;
+  order: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8a6d03;
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
 }
 
-.salad{
-    width: 85%;
-    height: 7%;
-    background: linear-gradient(#228b22, #91ce50);
-    border-radius: 20px;
-    margin: 2% auto;
+.salad {
+  width: 85%;
+  height: 7%;
+  min-height: 18px;
+  background: linear-gradient(#228b22, #91ce50);
+  border-radius: 20px;
+  margin: 1% auto;
+  order: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
 
 .tomato {
-    width: 80%;
-    height: 3%;
-    background: linear-gradient(#fb3813, #c45e38);
-    border-radius: 20px;
-    margin: 2% auto;
+  width: 80%;
+  height: 3%;
+  min-height: 10px;
+  background: linear-gradient(#fb3813, #c45e38);
+  border-radius: 20px;
+  margin: 1% auto;
+  order: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+/* Footer Styles */
+.footer {
+  margin-top: 30px;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  color: #777;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .burger {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .burger {
+    width: 95%;
+    height: 55vh;
+  }
+  
+  .top-bun, .bottom-bun, .meat, .cheese, .salad, .tomato {
+    width: 90%;
+  }
 }

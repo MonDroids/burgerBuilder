@@ -1,4 +1,5 @@
 import "./App.css";
+import Burger from "./component/burgerBuild/burger";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       </header>
       <main>
         <section className="burger-builder">
-          {/* {<BurgerBuilder />} */}
+          <Burger />
         </section>
       </main>
       <footer className="App-footer">
