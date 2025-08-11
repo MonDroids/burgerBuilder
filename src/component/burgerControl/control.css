@@ -1,0 +1,47 @@
+
+
+.controls button{
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #8f5e1e;
+    border: 1px solid #70420e;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover{
+    background-color: #99703f;
+    border: 1px solid #99703f;
+}
+
+.controls button:active{
+    background-color: #382106;
+    border: 1px solid #382106;
+}
+
+.controls button:disabled{
+    background-color: #ac9980;
+    border: 1px solid #7e7365;
+    color: #ccc;
+    cursor: default;
+}
+
+.controls button:disabled:hover{
+    background-color: #ac9980;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .controls {
+        width: 500px;
+    }
+}
