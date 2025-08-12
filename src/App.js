@@ -1,5 +1,6 @@
 import "./App.css";
 import Burger from "./component/burgerBuild/burger";
+import BuildControl from "./component/burgerControl/control";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <main>
         <section className="burger-builder">
           <Burger />
+          <BuildControl />
         </section>
       </main>
       <footer className="App-footer">
