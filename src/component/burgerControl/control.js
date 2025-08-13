@@ -1,51 +1,32 @@
-import { useState } from 'react';
 import './control.css';
 
-function BuildControl() {
-    const [ingredients, setIngredients] = useState({
-        salad: 0,
-        tomato: 0,
-        cheese: 0,
-        meat: 0
-    });
+    function BuildControl(props){
+        return(
+            <div className='controls'>
+                <h2>Build Control</h2>
 
-    const addIngredient = (type) => {
-        setIngredients((prevIngredients) => ({
-            ...prevIngredients,
-            [type]: prevIngredients[type] + 1
-        }));
-    };
+                <div className='control-row'>
+                    <span className='ingredient-name'>Meat: {props.meat}</span>
+                    <button onClick={props.addMeat} className='add-button'>Add Meat</button>
+                    <button onClick={props.removeMeat} className='remove-button' disabled={props.meat === 0}>Remove Meat</button>
+                </div>
+                <div className='control-row'>
+                    <span className='ingredient-name'>Cheese: {props.cheese}</span>
+                    <button onClick={props.addCheese} className='add-button'>Add Cheese</button>
+                    <button onClick={props.removeCheese} className='remove-button' disabled={props.cheese === 0}>Remove Cheese</button>
+                </div>
+                <div className='control-row'>
+                    <span className='ingredient-name'>Salad: {props.salad}</span>
+                    <button onClick={props.addSalad} className='add-button'>Add Salad</button>
+                    <button onClick={props.removeSalad} className='remove-button' disabled={props.salad === 0}>Remove Salad</button>
+                </div>
+                <div className='control-row'>
+                    <span className='ingredient-name'>Tomato: {props.tomato}</span>
+                    <button onClick={props.addTomato} className='add-button'>Add Tomato</button>
+                    <button onClick={props.removeTomato} className='remove-button' disabled={props.tomato === 0}>Remove Tomato</button>
+                </div>
 
-    const removeIngredient = (type) => {
-        setIngredients((prevIngredients) => ({
-            ...prevIngredients,
-            [type]: Math.max(prevIngredients[type] - 1)
-        }));
-    };
-
-    // You can return some JSX here if needed
-    return (
-        <div className='controls'>
-            <div>
-                <span>Max: {ingredients.meat}</span>
-                <button onClick={() => addIngredient('meat')}>Add Meat</button>
-                <button onClick={() => removeIngredient('meat')} disabled={ingredients.meat === 0}>Remove Meat</button>
+                <button className='order-button'>ORDER NOW</button>
             </div>
-            <div>
-                <span>Max: {ingredients.cheese}</span>
-                <button onClick={() => addIngredient('cheese')}>Add Cheese</button>
-                <button onClick={() => removeIngredient('cheese')} disabled={ingredients.cheese === 0}>Remove Cheese</button>
-            </div>
-            <div>
-                <span>Max: {ingredients.salad}</span>
-                <button onClick={() => addIngredient('salad')}>Add Salad</button>
-                <button onClick={() => removeIngredient('salad')} disabled={ingredients.salad === 0}>Remove Salad</button>
-            </div>
-            <div>
-                <span>Max: {ingredients.tomato}</span>
-                <button onClick={() => addIngredient('tomato')}>Add Tomato</button>
-                <button onClick={() => removeIngredient('tomato')} disabled={ingredients.tomato === 0}>Remove Tomato</button>
-            </div>
-        </div>
-    );
-}
+        )
+    }
