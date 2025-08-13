@@ -1,224 +1,131 @@
-/* Container Styles */
-.burger-container {
-  text-align: center;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* .burger-title {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  color: #e27b36;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.burger-subtitle {
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  color: #555;
-  margin-bottom: 20px;
-} */
-
-/* Burger Styles */
 .burger {
-  width: 90%;
-  max-width: 400px;
-  margin: 0 auto;
-  height: 60vh;
-  min-height: 300px;
-  max-height: 600px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-/* Bun Styles */
-.top-bun {
-  height: 20%;
-  min-height: 60px;
-  width: 80%;
-  background: linear-gradient(#bc581e, #e27b36);
-  border-radius: 50% 50% 0 0;
-  box-shadow: inset 0 -15px 0 #c15711;
-  margin: 0 auto 2%;
-  position: relative;
-  order: 1;
-  z-index: 10;
-}
-
-.bottom-bun {
-  height: 13%;
-  min-height: 40px;
-  width: 80%;
-  background: linear-gradient(#f08e4a, #e27b36);
-  border-radius: 0 0 30px 30px;
-  box-shadow: inset 0 -15px 0 #c15711;
-  margin: 2% auto 0;
-  order: 6;
-}
-
-/* Seed Styles */
-.seed1 {
-  width: 10%;
-  height: 15%;
-  position: absolute;
-  left: 30%;
-  top: 50%;
-  border-radius: 40%;
-  transform: rotate(-20deg);
+  width: 350px;
+  margin: 20px auto;
+  text-align: center;
   background-color: white;
-  box-shadow: inset -2px 0 #c9c9c9;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 3px solid #ddd;
 }
 
-.seed1:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  position: absolute;
-  top: -260%;
-  left: -170%;
-  border-radius: 40%;
-  transform: rotate(60deg);
-  box-shadow: inset -1px 2px #c9c9c9;
+.top-bun {
+  height: 60px;
+  width: 80%;
+  background: linear-gradient(135deg, #d4a574, #c19753);
+  border-radius: 50% 50% 0 0;
+  margin: 10px auto;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #8b4513;
+  font-weight: bold;
 }
 
-.seed1:before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
+.seed1, .seed2, .seed3 {
+  width: 8px;
+  height: 8px;
+  background: #cc9a06;
+  border-radius: 50%;
   position: absolute;
-  top: 180%;
-  left: -50%;
-  border-radius: 40%;
-  transform: rotate(60deg);
-  box-shadow: inset -1px 3px #c9c9c9;
+}
+
+.seed1 {
+  top: 40%;
+  left: 25%;
 }
 
 .seed2 {
-  width: 10%;
-  height: 15%;
-  position: absolute;
-  background-color: white;
-  left: 64%;
-  top: 50%;
-  border-radius: 40%;
-  transform: rotate(10deg);
-  box-shadow: inset 3px 0 #c9c9c9;
+  top: 60%;
+  right: 30%;
 }
 
 .seed3 {
-  width: 10%;
-  height: 15%;
-  position: absolute;
-  background-color: white;
-  left: 64%;
-  top: 50%;
-  border-radius: 40%;
-  transform: rotate(20deg);
+  top: 30%;
+  left: 50%;
 }
 
-.seed2:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: white;
-  top: -130%;
-  left: -150%;
-  border-radius: 40%;
-  transform: rotate(90deg);
-  box-shadow: inset 1px 3px #c9c9c9;
-}
-
-/* Ingredient Styles */
-.meat {
+.bottom-bun {
+  height: 40px;
   width: 80%;
-  height: 8%;
-  min-height: 20px;
-  background: linear-gradient(#7f3608, #702e05);
-  border-radius: 15px;
-  margin: 1% auto;
-  order: 4;
+  background: linear-gradient(135deg, #c19753, #a67c3a);
+  border-radius: 0 0 30px 30px;
+  margin: 10px auto;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.2rem;
+  color: #8b4513;
+  font-weight: bold;
+}
+
+.ingredients {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 2px dashed #ccc;
+}
+
+.ingredients p {
+  margin: 8px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.meat {
+  background: linear-gradient(135deg, #8b4513, #654321);
+  height: 35px;
+  width: 80%;
+  margin: 5px auto;
+  border-radius: 15px;
   color: white;
-  font-size: clamp(0.6rem, 1.5vw, 1rem);
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  font-weight: bold;
+  line-height: 35px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  font-size: 1rem;
 }
 
 .cheese {
-  width: 90%;
-  height: 5%;
-  min-height: 15px;
-  background: linear-gradient(#f4d004, #d6bb22);
+  background: linear-gradient(135deg, #ffd700, #ffcc00);
+  height: 25px;
+  width: 80%;
+  margin: 5px auto;
   border-radius: 20px;
-  margin: 1% auto;
-  order: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #8a6d03;
-  font-size: clamp(0.6rem, 1.5vw, 1rem);
-  text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+  color: #333;
+  font-weight: bold;
+  line-height: 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-size: 0.9rem;
 }
 
 .salad {
-  width: 85%;
-  height: 7%;
-  min-height: 18px;
-  background: linear-gradient(#228b22, #91ce50);
+  background: linear-gradient(135deg, #90ee90, #32cd32);
+  height: 30px;
+  width: 80%;
+  margin: 5px auto;
   border-radius: 20px;
-  margin: 1% auto;
-  order: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: clamp(0.6rem, 1.5vw, 1rem);
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  color: #2e8b57;
+  font-weight: bold;
+  line-height: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-size: 0.9rem;
 }
 
 .tomato {
+  background: linear-gradient(135deg, #ff6347, #dc143c);
+  height: 30px;
   width: 80%;
-  height: 3%;
-  min-height: 10px;
-  background: linear-gradient(#fb3813, #c45e38);
-  border-radius: 20px;
-  margin: 1% auto;
-  order: 5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 5px auto;
+  border-radius: 50%;
   color: white;
-  font-size: clamp(0.6rem, 1.5vw, 1rem);
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-}
-
-/* Footer Styles */
-.footer {
-  margin-top: 30px;
-  font-size: clamp(0.7rem, 2vw, 0.9rem);
-  color: #777;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .burger {
-    height: 50vh;
-  }
-}
-
-@media (max-width: 480px) {
-  .burger {
-    width: 95%;
-    height: 55vh;
-  }
-  
-  .top-bun, .bottom-bun, .meat, .cheese, .salad, .tomato {
-    width: 90%;
-  }
+  font-weight: bold;
+  line-height: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-size: 0.9rem;
 }
