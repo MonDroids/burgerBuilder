@@ -1,6 +1,22 @@
+import { useNavigate } from 'react-router-dom';
 import './control.css';
 
+
     function BuildControl(props){
+        const navigate = useNavigate();
+        const handleOrder = () => {
+    navigate('/ordered', {
+        state: {
+        orderData: {
+        meat: props.meat,
+        cheese: props.cheese,
+        salad: props.salad,
+        tomato: props.tomato,
+        totalPrice: props.totalPrice(),
+        },
+      },
+    });
+  };
         return(
             <div className='controls'>
                 <h2>Build Control</h2>
@@ -26,7 +42,12 @@ import './control.css';
                     <button onClick={props.removeTomato} className='remove-button' disabled={props.tomato === 0}>Remove Tomato</button>
                 </div>
 
-                <button className='order-button'>ORDER NOW</button>
+                <button className='order-button' onClick={handleOrder}>
+                    ORDER NOW 
+                    
+                </button>
             </div>
-        )
+        );
     }
+
+    export default BuildControl;
