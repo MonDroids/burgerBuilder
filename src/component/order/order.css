@@ -1,0 +1,61 @@
+.order {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.order h2 {
+  color: #495057;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #ffc107;
+  padding-bottom: 10px;
+}
+
+.order p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.order h3 {
+  font-size: 1.5rem;
+  color: #28a745;
+  margin: 20px 0;
+  padding: 15px;
+  background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+  border-radius: 10px;
+  border: 2px solid #ffc107;
+}
+
+.order-button {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  width: 100%;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.order-button:hover {
+  background: linear-gradient(135deg, #218838, #1ba085);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(40, 167, 69, 0.4);
+}
+
+.order-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
